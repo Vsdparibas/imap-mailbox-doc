@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'IMAP mailbox',
   tagline: 'Simple NodeJS IMAP mailbox library',
-  url: 'https://vsdparibas.github.io/imap-mailbox-doc',
+  url: 'https://vsdparibas.github.io',
   baseUrl: '/imap-mailbox-doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
