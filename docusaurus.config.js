@@ -8,11 +8,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'IMAP mailbox',
   tagline: 'Simple NodeJS IMAP mailbox library',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://vsdparibas.github.io/imap-mailbox-doc',
+  baseUrl: '/imap-mailbox-doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
