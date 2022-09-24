@@ -25,7 +25,17 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-US'
+      },
+      fr: {
+        label: 'Français',
+        htmlLang: 'fr'
+      }
+    }
   },
 
   presets: [
@@ -38,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Vsdparibas/imap-mailbox-doc/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -64,6 +74,10 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/facebook/docusaurus',
