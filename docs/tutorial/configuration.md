@@ -4,7 +4,7 @@ step_position: 2
 
 # Configuration
 
-To configure IMAP mailbox, you need to create a [`ImapConfig`](/api#imapconfig) object in a file.
+To configure IMAP mailbox, you need to create a `ImapConfig` object in a file.
 
 You can name this file as you wish.
 
