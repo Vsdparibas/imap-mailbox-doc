@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkimap_mailbox_doc=self.webpackChunkimap_mailbox_doc||[]).push([[920],{4911:t=>{t.exports=JSON.parse('{"title":"Tutorial","slug":"/category/tutorial","permalink":"/docs/category/tutorial","navigation":{"previous":{"title":"Introduction","permalink":"/docs/intro"},"next":{"title":"Installation","permalink":"/docs/tutorial/installation"}}}')}}]);
