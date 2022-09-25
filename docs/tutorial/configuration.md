@@ -1,14 +1,21 @@
 ---
-step_position: 2
+sidebar_position: 3
 ---
 
 # Configuration
 
-To configure IMAP mailbox, you need to create a `ImapConfig` object in a file.
+To configure IMAP mailbox, you need to create a [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) object in a file.
 
 You can name this file as you wish.
 
 This is a configuration example, named here `imap-config.js`.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="ESM" default>
+
 
 ```js title="/imap-config.js"
 const config = {
@@ -23,19 +30,40 @@ const config = {
 }
 
 export config;
-// For CommonJS, replace "export config;" by :
-// module.exports = { config };
 ```
-For more options, check the `ImapConfig` documentation.
+
+  </TabItem>
+  <TabItem value="orange" label="CJS">
+
+
+```js title="/imap-config.js"
+const config = {
+    host: 'imap.server.domain',
+    port: 993,
+    auth: {
+        user: 'username@server.domain',
+        pass: 'password',
+    }
+    logger: false,
+    logging: true,
+}
+
+module.exports = { config };
+```
+
+  </TabItem>
+</Tabs>
+
+For more options, check the [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) documentation.
 
 Parameters `host`, `port`, `auth`, `user` and `pass` are needed.
 
-The `logger` parameter set to false disable imapflow (verbose logging), which IMAP mailbox is based on.
+The `logger` parameter set to false disable logging from imapflow, which IMAP mailbox is based on (verbose logging).
 
 The `logging` parameter set to true enable IMAP mailbox logging.
 
 :::info
-For typescript, you can import `ImapConfig` interface with :
+For typescript, you can import [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) interface with :
 ```js
 import { ImapConfig } from 'imap-mailbox';
 ```

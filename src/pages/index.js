@@ -15,7 +15,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle"><Translate>Simple NodeJS IMAP mailbox library</Translate></p>
         <div className={styles.buttons}>
           <Link
             className={btnClassname}
@@ -36,7 +36,10 @@ function HomepageHeader() {
 export default function Home() {
   return (
     <Layout
-      title={`Home`}
+      title={translate({
+        message: "Home",
+        description: "Home tab title"
+      })}
       description={translate({
         message: "Simple NodeJS IMAP mailbox library",
         description: "HTML meta description tag"

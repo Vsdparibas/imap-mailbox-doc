@@ -1,25 +1,35 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Installation
 
-To install IMAP mailbox, you need to install the library :
+To use IMAP mailbox, you need to install the library :
 
 ```bash
 npm install imap-mailbox
 ```
 
-If you are working with ES modules, then use imports :
+To import IMAP mailbox in your project :
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="ESM" default>
 
 ```js
 import Imap from 'imap-mailbox';
 ```
 
-If you are working with CommonJS, then use require :
+  </TabItem>
+  <TabItem value="orange" label="CJS">
 
 ```js
 const Imap = require('imap-mailbox').default;
 ```
+
+  </TabItem>
+</Tabs>
 
 In the next part, we will see how to configure the mailbox.

@@ -1,0 +1,121 @@
+---
+sidebar_position: 1
+---
+
+# Imap object
+
+<a name="Imap"></a>
+
+## Imap
+**Kind**: global class  
+
+* [Imap](#Imap)
+    * [new Imap(config)](#new_Imap_new)
+    * [.run()](#Imap+run)
+    * [.deleteMails(mailboxPath, toDelete)](#Imap+deleteMails) ⇒ <code>boolean</code>
+    * [.seeMails(mailboxPath, toSee)](#Imap+seeMails) ⇒ <code>boolean</code>
+    * [.unseeMails(mailboxPath, toUnsee)](#Imap+unseeMails) ⇒ <code>boolean</code>
+    * [.getUnseenMails(mailboxPath)](#Imap+getUnseenMails) ⇒ <code>Array.&lt;Mail&gt;</code>
+    * [.getSeenMails(mailboxPath)](#Imap+getSeenMails) ⇒ <code>Array.&lt;Mail&gt;</code>
+    * [.getAllMails(mailboxPath)](#Imap+getAllMails) ⇒ <code>Array.&lt;Mail&gt;</code>
+    * [.getMailboxes()](#Imap+getMailboxes) ⇒ <code>Map.&lt;string, Mailbox&gt;</code>
+
+<a name="new_Imap_new"></a>
+
+### new Imap(config)
+Await run() method before any action on this object
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| config | <code>ImapConfig</code> | Imap configuration |
+
+<a name="Imap+run"></a>
+
+### imap.run()
+Run IMAP service
+You should await this method before any action on Imap object
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+<a name="Imap+deleteMails"></a>
+
+### imap.deleteMails(mailboxPath, toDelete) ⇒ <code>boolean</code>
+Delete mails from uids or mail objects
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>boolean</code> - true if mails are deleted  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Mailbox path where mails to delete are |
+| toDelete | <code>UidsList</code> | Mails or uids of mails to delete |
+
+<a name="Imap+seeMails"></a>
+
+### imap.seeMails(mailboxPath, toSee) ⇒ <code>boolean</code>
+Mark mails as seen from uids or mail object
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>boolean</code> - true if mails are marked seen  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Mailbox path where mails to see are |
+| toSee | <code>UidsList</code> | Mails or uids of mails to see |
+
+<a name="Imap+unseeMails"></a>
+
+### imap.unseeMails(mailboxPath, toUnsee) ⇒ <code>boolean</code>
+Mark mails as unseen from uids or mail object
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>boolean</code> - true if mails are marked unseen  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Mailbox path where mails to unsee are |
+| toUnsee | <code>UidsList</code> | Mails or uids of mails to unsee |
+
+<a name="Imap+getUnseenMails"></a>
+
+### imap.getUnseenMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+Get a list of unseen mails from a mailbox
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Path to mailbox (or name) |
+
+<a name="Imap+getSeenMails"></a>
+
+### imap.getSeenMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+Get a list of seen mails from a mailbox
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Path to mailbox (or name) |
+
+<a name="Imap+getAllMails"></a>
+
+### imap.getAllMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+Get all the mails from a mailbox
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Path to mailbox (or name) |
+
+<a name="Imap+getMailboxes"></a>
+
+### imap.getMailboxes() ⇒ <code>Map.&lt;string, Mailbox&gt;</code>
+Get list of mailboxes
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+**Returns**: <code>Map.&lt;string, Mailbox&gt;</code> - Map of mailboxes  
