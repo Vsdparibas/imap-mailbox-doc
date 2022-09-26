@@ -1,0 +1,135 @@
+---
+sidebar_position: 1
+---
+
+# Imap
+
+<a name="Imap"></a>
+
+## Imap
+**Type**: classe globale
+
+* [Imap](#Imap)
+    * [new Imap(config)](#new_Imap_new)
+    * [.run()](#Imap+run)
+    * [.on(event, callback)](#Imap+on)
+    * [.deleteMails(mailboxPath, toDelete)](#Imap+deleteMails) ⇒ <code>boolean</code>
+    * [.seeMails(mailboxPath, toSee)](#Imap+seeMails) ⇒ <code>boolean</code>
+    * [.unseeMails(mailboxPath, toUnsee)](#Imap+unseeMails) ⇒ <code>boolean</code>
+    * [.getUnseenMails(mailboxPath)](#Imap+getUnseenMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getSeenMails(mailboxPath)](#Imap+getSeenMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getAllMails(mailboxPath)](#Imap+getAllMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getMailboxes()](#Imap+getMailboxes) ⇒ <code>Map.&lt;string, [Mailbox](/docs/documentation/mailbox)&gt;</code>
+
+<a name="new_Imap_new"></a>
+
+### new Imap(config)
+Attendre la méthode run() avant quelconque action sur cet objet.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| config | <code>[ImapConfig](/docs/documentation/imap-config)</code> | Configuration de Imap |
+
+<a name="Imap+run"></a>
+
+### imap.run()
+Lance le service IMAP
+Tu ne dois faire aucune action sur l'objet Imap avant d'avoir effectué cette méthode.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+
+<a name="Imap+on"></a>
+
+### imap.on(event, callback)
+Utilise le callback quand un évènement est émis.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| event | `'newMail'` / `'loadedMail'` / `'deletedMail'` | Évènement à écouter |
+| callback | `(mail) => void` | Fonction callback à éxecuter quand l'évènement est émis |
+
+<a name="Imap+deleteMails"></a>
+
+### imap.deleteMails(mailboxPath, toDelete) ⇒ <code>boolean</code>
+Supprimer des mails depuis leur uid ou l'objet [`Mail`](/docs/documentation/mail).
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>boolean</code> - `true` si les mails ont été supprimés
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail où supprimer les mails |
+| toDelete | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails ou uids à supprimer |
+
+<a name="Imap+seeMails"></a>
+
+### imap.seeMails(mailboxPath, toSee) ⇒ <code>boolean</code>
+Marque les mails comme vus depuis leur uid ou l'objet [`Mail`](/docs/documentation/mail).
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>boolean</code> - `true` si les mails on été marqués comme vu 
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail où supprimer les mails |
+| toSee | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails ou uids à marquer comme vu |
+
+<a name="Imap+unseeMails"></a>
+
+### imap.unseeMails(mailboxPath, toUnsee) ⇒ <code>boolean</code>
+Marque les mails comme non vus depuis leur uid ou l'objet [`Mail`](/docs/documentation/mail).
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>boolean</code> - `true` si les mails sont marqués comme non vu
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail où supprimer les mails |
+| toUnsee | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails ou uids à marquer comme non vu |
+
+<a name="Imap+getUnseenMails"></a>
+
+### imap.getUnseenMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+Récupère la liste des mails non vu d'une boîte mail.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - Liste de mails
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail |
+
+<a name="Imap+getSeenMails"></a>
+
+### imap.getSeenMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+Récupère la liste des mails vus d'une boîte mail.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - Liste de mails
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail |
+
+<a name="Imap+getAllMails"></a>
+
+### imap.getAllMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+Récupère tous les mails d'une boîte mail.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - Liste de mails
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mailboxPath | <code>string</code> | Nom de la boîte mail |
+
+<a name="Imap+getMailboxes"></a>
+
+### imap.getMailboxes() ⇒ <code>Map.&lt;string, [Mailbox](/docs/documentation/mailbox)&gt;</code>
+Récupère la liste des boîtes mail.
+
+**Type**: méthode d'instance de [<code>Imap</code>](#Imap)  
+**Retourne**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - Map de [`Mailbox`](/docs/documentation/mailbox)

@@ -8,7 +8,7 @@ sidebar_position: 11
 
 ### Parameters
 
-Interface Attachment extends interface [AttachmentCommon](#attachment-common)
+Interface `Attachment` extends interface [`AttachmentCommon`](#attachment-common)
 
 | Name | Type | Description |
 | --- | --- | --- |

@@ -12,7 +12,7 @@ sidebar_position: 10
 | --- | --- | --- |
 | value | [`EmailAddress[]`](#email-address) | An array with address details |
 | html | `string` | A formatted address string for HTML context |
-| test | `string` | A formatted address string for plaintext context |
+| text | `string` | A formatted address string for plaintext context |
 
 <a name="email-address"></a>
 

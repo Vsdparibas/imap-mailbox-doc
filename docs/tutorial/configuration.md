@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Configuration
 
-To configure IMAP mailbox, you need to create an [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) object in a file or a variable.
+To configure IMAP mailbox, you need to create an [`ImapConfig`](/docs/documentation/imap-config) object in a file or a variable.
 
 This is a configuration example, named here `imap-config.js`.
 
@@ -51,7 +51,7 @@ module.exports = { config };
   </TabItem>
 </Tabs>
 
-For more options, check the [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) documentation.
+For more options, check the [`ImapConfig`](/docs/documentation/imap-config) documentation.
 
 Parameters `host`, `port`, `auth`, `user` and `pass` are needed.
 
@@ -60,7 +60,7 @@ The `logger` parameter set to false disable logging from imapflow, which IMAP ma
 The `logging` parameter set to true enable IMAP mailbox logging.
 
 :::info
-For typescript, you can import [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) interface with :
+For typescript, you can import [`ImapConfig`](/docs/documentation/imap-config) interface with :
 ```js
 import { ImapConfig } from 'imap-mailbox';
 ```

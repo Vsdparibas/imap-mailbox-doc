@@ -267,5 +267,32 @@
   "Home": {
     "message": "Accueil",
     "description": "Home tab title"
+  },
+  "Features": {
+    "message": "Fonctionnalités"
+  },
+  "Get mailboxes": {
+    "message": "Récupérer les boîtes mails"
+  },
+  "Get mails": {
+    "message": "Récupérer des mails"
+  },
+  "Delete mails": {
+    "message": "Supprimer des mails"
+  },
+  "Read/Unread mails": {
+    "message": "Marqué lu/non lu des mails"
+  },
+  "Watch mailboxes": {
+    "message": "Surveiller des boîtes mail"
+  },
+  "Quick start": {
+    "message": "Démarrage rapide"
+  },
+  "Just follow the tutorial, it's easy and quick.": {
+    "message": "Suis simplement le tutoriel, c'est facile et rapide."
+  },
+  "This project is based on imapflow.": {
+    "message": "Ce projet est basé sur imapflow."
   }
 }

@@ -12,6 +12,7 @@ sidebar_position: 1
 * [Imap](#Imap)
     * [new Imap(config)](#new_Imap_new)
     * [.run()](#Imap+run)
+    * [.on(event, callback)](#Imap+on)
     * [.deleteMails(mailboxPath, toDelete)](#Imap+deleteMails) ⇒ <code>boolean</code>
     * [.seeMails(mailboxPath, toSee)](#Imap+seeMails) ⇒ <code>boolean</code>
     * [.unseeMails(mailboxPath, toUnsee)](#Imap+unseeMails) ⇒ <code>boolean</code>
@@ -37,6 +38,19 @@ Run IMAP service
 You should await this method before any action on Imap object
 
 **Kind**: instance method of [<code>Imap</code>](#Imap)  
+
+<a name="Imap+on"></a>
+
+### imap.on(event, callback)
+Use callback when event is emitted
+
+**Kind**: instance method of [<code>Imap</code>](#Imap)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| event | `'newMail'` / `'loadedMail'` / `'deletedMail'` | Event to target |
+| callback | `(mail) => void` | Callback function to execute when event is emitted |
+
 <a name="Imap+deleteMails"></a>
 
 ### imap.deleteMails(mailboxPath, toDelete) ⇒ <code>boolean</code>

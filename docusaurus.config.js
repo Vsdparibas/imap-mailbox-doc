@@ -82,7 +82,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Vsdparibas/imap-mailbox/',
             label: 'GitHub',
             position: 'right',
           },
