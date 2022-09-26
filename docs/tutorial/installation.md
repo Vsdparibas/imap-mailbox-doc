@@ -6,7 +6,7 @@ sidebar_position: 2
 
 To use IMAP mailbox, you need to install the library :
 
-```bash
+```bash npm2yarn
 npm install imap-mailbox
 ```
 

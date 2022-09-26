@@ -12,9 +12,31 @@ You can get, delete, see and unsee mails.
 
 There is a code example to get mails from mailbox `INBOX` :
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="ESM" default>
+
 ```js
 import Imap from 'imap-mailbox';
 import { config } from './imap-config'; // ImapConfig
+
+const imap = new Imap(config);
+await imap.start(); // Connect to IMAP server
+
+const mailboxPath = 'INBOX'; // Mailbox path (name)
+const mails = await imap.getAllMails(mailboxPath);
+
+console.log(mails); // Log an array of Mail
+```
+
+  </TabItem>
+  <TabItem value="orange" label="CJS">
+
+```js
+const Imap = require('imap-mailbox').default;
+const { config } = require('./imap-config'); // ImapConfig
 
 async function run() {
     const imap = new Imap(config);
@@ -29,12 +51,12 @@ async function run() {
 run();
 ```
 
+  </TabItem>
+</Tabs>
+
 ## Delete mails
 
 There is a code example to delete mails from mailbox `INBOX` :
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="apple" label="ESM" default>
@@ -58,7 +80,7 @@ await imap.deleteMails(mailboxPath, { mails });
 
 
 ```js
-const Imap = require('imap-mailbox');
+const Imap = require('imap-mailbox').default;
 const { config } = require('./imap-config'); // ImapConfig
 
 async function run() {

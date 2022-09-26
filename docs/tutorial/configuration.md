@@ -4,9 +4,7 @@ sidebar_position: 3
 
 # Configuration
 
-To configure IMAP mailbox, you need to create a [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) object in a file.
-
-You can name this file as you wish.
+To configure IMAP mailbox, you need to create an [`ImapConfig`](/imap-mailbox-doc/docs/documentation/imap-config) object in a file or a variable.
 
 This is a configuration example, named here `imap-config.js`.
 
@@ -15,7 +13,6 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="apple" label="ESM" default>
-
 
 ```js title="/imap-config.js"
 const config = {
@@ -68,6 +65,5 @@ For typescript, you can import [`ImapConfig`](/imap-mailbox-doc/docs/documentati
 import { ImapConfig } from 'imap-mailbox';
 ```
 :::
-
 
 You can finally use IMAP mailbox. We will see how in the next step.

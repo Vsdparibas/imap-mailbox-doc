@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Imap object
+# Imap
 
 <a name="Imap"></a>
 
@@ -15,10 +15,10 @@ sidebar_position: 1
     * [.deleteMails(mailboxPath, toDelete)](#Imap+deleteMails) ⇒ <code>boolean</code>
     * [.seeMails(mailboxPath, toSee)](#Imap+seeMails) ⇒ <code>boolean</code>
     * [.unseeMails(mailboxPath, toUnsee)](#Imap+unseeMails) ⇒ <code>boolean</code>
-    * [.getUnseenMails(mailboxPath)](#Imap+getUnseenMails) ⇒ <code>Array.&lt;Mail&gt;</code>
-    * [.getSeenMails(mailboxPath)](#Imap+getSeenMails) ⇒ <code>Array.&lt;Mail&gt;</code>
-    * [.getAllMails(mailboxPath)](#Imap+getAllMails) ⇒ <code>Array.&lt;Mail&gt;</code>
-    * [.getMailboxes()](#Imap+getMailboxes) ⇒ <code>Map.&lt;string, Mailbox&gt;</code>
+    * [.getUnseenMails(mailboxPath)](#Imap+getUnseenMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getSeenMails(mailboxPath)](#Imap+getSeenMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getAllMails(mailboxPath)](#Imap+getAllMails) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
+    * [.getMailboxes()](#Imap+getMailboxes) ⇒ <code>Map.&lt;string, [Mailbox](/docs/documentation/mailbox)&gt;</code>
 
 <a name="new_Imap_new"></a>
 
@@ -28,7 +28,7 @@ Await run() method before any action on this object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| config | <code>ImapConfig</code> | Imap configuration |
+| config | <code>[ImapConfig](/docs/documentation/imap-config)</code> | Imap configuration |
 
 <a name="Imap+run"></a>
 
@@ -48,7 +48,7 @@ Delete mails from uids or mail objects
 | Param | Type | Description |
 | --- | --- | --- |
 | mailboxPath | <code>string</code> | Mailbox path where mails to delete are |
-| toDelete | <code>UidsList</code> | Mails or uids of mails to delete |
+| toDelete | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails or uids of mails to delete |
 
 <a name="Imap+seeMails"></a>
 
@@ -61,7 +61,7 @@ Mark mails as seen from uids or mail object
 | Param | Type | Description |
 | --- | --- | --- |
 | mailboxPath | <code>string</code> | Mailbox path where mails to see are |
-| toSee | <code>UidsList</code> | Mails or uids of mails to see |
+| toSee | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails or uids of mails to see |
 
 <a name="Imap+unseeMails"></a>
 
@@ -74,15 +74,15 @@ Mark mails as unseen from uids or mail object
 | Param | Type | Description |
 | --- | --- | --- |
 | mailboxPath | <code>string</code> | Mailbox path where mails to unsee are |
-| toUnsee | <code>UidsList</code> | Mails or uids of mails to unsee |
+| toUnsee | <code>[UidsList](/docs/documentation/uids-list)</code> | Mails or uids of mails to unsee |
 
 <a name="Imap+getUnseenMails"></a>
 
-### imap.getUnseenMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+### imap.getUnseenMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
 Get a list of unseen mails from a mailbox
 
 **Kind**: instance method of [<code>Imap</code>](#Imap)  
-**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+**Returns**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - List of mails  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -90,11 +90,11 @@ Get a list of unseen mails from a mailbox
 
 <a name="Imap+getSeenMails"></a>
 
-### imap.getSeenMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+### imap.getSeenMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
 Get a list of seen mails from a mailbox
 
 **Kind**: instance method of [<code>Imap</code>](#Imap)  
-**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+**Returns**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - List of mails  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -102,11 +102,11 @@ Get a list of seen mails from a mailbox
 
 <a name="Imap+getAllMails"></a>
 
-### imap.getAllMails(mailboxPath) ⇒ <code>Array.&lt;Mail&gt;</code>
+### imap.getAllMails(mailboxPath) ⇒ <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code>
 Get all the mails from a mailbox
 
 **Kind**: instance method of [<code>Imap</code>](#Imap)  
-**Returns**: <code>Array.&lt;Mail&gt;</code> - List of mails  
+**Returns**: <code>Array.&lt;[Mail](/docs/documentation/mail)&gt;</code> - List of mails  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -114,8 +114,8 @@ Get all the mails from a mailbox
 
 <a name="Imap+getMailboxes"></a>
 
-### imap.getMailboxes() ⇒ <code>Map.&lt;string, Mailbox&gt;</code>
+### imap.getMailboxes() ⇒ <code>Map.&lt;string, [Mailbox](/docs/documentation/mailbox)&gt;</code>
 Get list of mailboxes
 
 **Kind**: instance method of [<code>Imap</code>](#Imap)  
-**Returns**: <code>Map.&lt;string, Mailbox&gt;</code> - Map of mailboxes  
+**Returns**: <code>Map.&lt;string, [Mailbox](/docs/documentation/mailbox)&gt;</code> - Map of mailboxes  

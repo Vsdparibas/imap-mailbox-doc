@@ -12,9 +12,30 @@ If you know them (like `INBOX`, `Sent`, `Trash`, ...), you don't need to get mai
 
 You can get mailboxes simply with this code :
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="ESM" default>
+
 ```js
 import Imap from 'imap-mailbox';
 import { config } from './imap-config'; // ImapConfig
+
+const imap = new Imap(config);
+await imap.start(); // Connect to IMAP server
+
+const mailboxes = await imap.getMailboxes();
+
+console.log(mailboxes); // Log a map of Mailbox objects
+```
+
+  </TabItem>
+  <TabItem value="orange" label="CJS">
+
+```js
+const Imap = require('imap-mailbox').default;
+const { config } = require('./imap-config'); // ImapConfig
 
 async function run() {
     const imap = new Imap(config);
@@ -27,6 +48,9 @@ async function run() {
 
 run();
 ```
+
+  </TabItem>
+</Tabs>
 
 Variable `mailboxes` contains `Mailbox` objects, where you can use `Mailbox.path` to get a mailbox name (path).
 

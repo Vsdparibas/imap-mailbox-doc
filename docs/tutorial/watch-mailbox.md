@@ -94,7 +94,7 @@ await imap.start(); // Connect to IMAP server after setting listeners
 
 
 ```js
-const Imap = require('imap-mailbox');
+const Imap = require('imap-mailbox').default;
 const { config } = require('./imap-config'); // ImapConfig
 
 function onNewMail(mail) {

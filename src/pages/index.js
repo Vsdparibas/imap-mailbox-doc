@@ -24,7 +24,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className={btnClassname}
-            to="/docs/tutorial/installation">
+            to="/docs/documentation/imap">
             <Translate>Documentation</Translate>
           </Link>
         </div>
